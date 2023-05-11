@@ -2,7 +2,6 @@ var express = require("express");
 var router = express.Router();
 const mongoose = require("mongoose");
 
-/* GET users listing. */
 router.get("/", async function (req, res, next) {
   const gists = await mongoose.model("Gist").find().exec();
 
