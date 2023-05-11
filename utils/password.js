@@ -1,4 +1,4 @@
-const bcryprt = require("bcryptjs");
+const bcryprt = require("bcrypt");
 
 /**
  * Hash the password

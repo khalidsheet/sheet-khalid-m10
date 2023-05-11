@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+require("./models/user");
+require("./models/gist");
+
 const connectToDatabase = async () => {
   const db = await mongoose.connect(
     "mongodb+srv://khalidsheet:khalid_98@cluster0.tpejxlk.mongodb.net/?retryWrites=true&w=majority",

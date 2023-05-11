@@ -2,15 +2,18 @@ extends layout
 
 block content
   div.login-container
+   
     div.login-box
+      if error
+        div.error #{error}
       h1.login-title Login
       form(action='/login', method='post')
         div.login-input-container
           label(for='username') Username
-          input(type='text', name='username', id='username', placeholder='Username' autocomplete='off')
+          input(type='text', name='username', id='username', placeholder='Username' autocomplete='off' value="#{old != null ? old.username : ''}")
         div.login-input-container
           label(for='password') Password
-          input(type='password', name='password', id='password', placeholder='Password' autocomplete='new-password')
+          input(type='password', name='password', id='password', placeholder='Password' autocomplete='new-password' autofocus="#{old != null}")
         div.login-input-container
           button(type="submit" class="button primary") Login
         div.login-input-container

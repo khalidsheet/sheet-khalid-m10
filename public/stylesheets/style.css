@@ -81,6 +81,8 @@ a {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 8px 16px;
 }
 
 .button a {
@@ -100,5 +102,65 @@ a {
 
 .button.secondary {
   background-color: #afafaf;
+  color: #fff;
+}
+
+.error {
+  background: #ff5a5a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.gist-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.gist-box {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gist-header {
+  padding: 16px;
+}
+
+.gist-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.gist-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gist-actions a {
+  color: #007bff;
+  font-size: 0.8rem;
+}
+
+.gist-body {
+  padding: 16px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
   color: #fff;
 }
