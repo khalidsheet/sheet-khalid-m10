@@ -1,5 +1,8 @@
 extends ../layout
 
+block styles
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css")
+
 block content 
     div(class='container' style='margin-top: 20px;')
         div.row
@@ -13,19 +16,25 @@ block content
                     div.row
                         div.col-md-12
                             div.form-group
-                                label(for='title') Title
+                                label.text-white.mt-4.mb-2(for='title') Gist title
                                 input#title.form-control(type='text' name='title' placeholder='Enter title')
                             div.form-group
-                                label(for='description') Description
+                                label.text-white.mt-4.mb-2(for='description') Gist Description 
+                                    span.text-secondary (optional)
                                 textarea#description.form-control(name='description' rows='3' placeholder='Enter description')
                             div.form-group
-                                label(for='content') Content
+                                label.text-white.mt-4.mb-2(for='content') Markdown content
                                 textarea#content.form-control(name='content' rows='10' placeholder='Enter content')
                             .form-group.mt-4 
                                 label.text-white.mr-4(for='public') Public
                                 input#public.d-block.ml-4(type='checkbox' name='public')
                             div.form-group.mt-4
                                 button.btn.btn-success(type='submit') Create
+
+block scripts
+    script(src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js" defer)   
+    script(src="https://cdn.jsdelivr.net/npm/marked/marked.min.js")                         
+    script(src='/javascripts/gists/new.js' defer)
                             
 
                         

@@ -164,3 +164,22 @@ a {
   margin-bottom: 20px;
   color: #fff;
 }
+
+.editor-toolbar a.active,
+.editor-toolbar a:hover {
+  background: #0b5ed7;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.editor-toolbar a {
+  background: #000000;
+  border-radius: 5px;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}

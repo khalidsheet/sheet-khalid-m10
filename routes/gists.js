@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 router.get("/", async function (req, res, next) {
   const gists = await mongoose.model("Gist").find().exec();
 
-  console.log(gists[0].user);
-
   res.render("gists/home", {
     title: "Gists",
     gists,
@@ -20,11 +18,11 @@ router.get("/new", async function (req, res, next) {
 });
 
 router.post("/new", async function (req, res, next) {
-  const { title, description, body, public } = req.body;
+  const { title, description, content, public } = req.body;
   const gist = new mongoose.model("Gist")({
     title,
     description,
-    body,
+    body: content,
     private: public != "on",
     user: req.cookies.user,
   });
